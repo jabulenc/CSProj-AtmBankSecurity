@@ -1,0 +1,3 @@
+1. cbc is complete static. ecb still has some definition to it
+2. ecb is not as complex as cbc. cbc introduces more complexity and randomness by relying on previous data when encrypting the following block.
+3. I can literally read exactly what the image said in the ecb encrypted version.
