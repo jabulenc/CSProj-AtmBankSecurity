@@ -1,0 +1,2 @@
+phpbb2mysql_data=a%3A2%3A%7Bs%3A11%3A%22autologinid%22%3Bs%3A32%3A%22fadbcecf4c532b7cb6d5a9edcb243b33%22%3Bs%3A6%3A%22userid%22%3Bs%3A1%3A%222%22%3B%7D; phpbb2mysql_sid=4abdb72cc073a8c29137e41e0fc36ae9; phpbb2mysql_t=a%3A1%3A%7Bi%3A2%3Bi%3A1475980866%3B%7D
+4abdb72cc073a8c29137e41e0fc36ae9

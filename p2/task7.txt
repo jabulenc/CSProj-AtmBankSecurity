@@ -1,0 +1,23 @@
+"pass"
+"username"="alice"
+"email"="bed@seed.com"
+"cur_password"="alice"
+"new_password"="pass"
+"password_confirm"="pass"
+"yim"="none' WHERE user_id = 6 ; #"
+
+You can get user_id from the Memberlist page and checking the link location- 
+it'll say u=# or something to that effect. That was important. Looks like
+the user who gets their info set is set by user_id at the end of the
+SQL command. I figured this out by pumping in a bad query, which made
+the SQL server error out, making the PHP script spit out an error code
+despite Alice not being an admin... Anyway, I took this, played around
+with it for a while. Setting user_password didn't work correctly. It may
+have, if I had maybe been able to get the salt and then crypt up the
+password. But in reality, if you had the salt for the crypt, you
+could do a lot more damage than just messing with a user!
+In the end, I figured that if I could redirect the user_id
+to Ted's, then comment out the rest of the query, I could change the
+password of Ted's account, only knowing Alices (or whoever's) account.
+Changed the email to bed@seed, because you can't set it to an
+existing account. 

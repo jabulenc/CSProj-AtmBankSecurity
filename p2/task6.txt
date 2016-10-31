@@ -1,0 +1,5 @@
+"username"="bob';#"
+"password"="doesntmatter"
+
+Input ignores the AND user_password bit at the end of the login query.
+Er... it didn't fail.

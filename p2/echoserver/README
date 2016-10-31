@@ -1,0 +1,44 @@
+ECHOSERV
+========
+
+Function
+========
+
+Demonstrates a simple TCP/IP echo server, using the
+Berkeley Sockets API. 
+
+
+Usage
+=====
+
+Example of usage:
+
+In one terminal, use this command to start the echo server
+    [paul@localhost paul]$ ./echoserv 5555 &
+
+In another terminal, use these commands to test that the echo server is working.
+Note that the echo server can only accept one connection at a time, so make sure the 
+test connection is closed before you try to use the echo server for a task.
+
+    [paul@localhost paul]$ telnet localhost 5555
+    Trying 127.0.0.1...
+    Connected to localhost.
+    Escape character is '^]'.
+    Echo this line for me, please.
+    Echo this line for me, please.
+    Connection closed by foreign host.
+    [paul@localhost paul]$
+
+
+Installation
+============
+
+If your system supports make, simply type:
+
+    make
+
+at the command line. Otherwise, compile and link echoserv.c and
+help.c in the usual way to create the executable. You may or may
+not need to link in additional libraries for the sockets functions;
+check your compiler's documentation.
+

