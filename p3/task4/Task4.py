@@ -17,19 +17,24 @@ class myThread (threading.Thread):
     def run(self):
         crack(self.q)
 
+#New IDea - each thread makes its own buffer of hashed passwords
+#compare existing hashes against those
 def crack(q):
 	while not exitFlag:
 			queueLock.acquire()
 			if not workQueue.empty():
 				print 'getting new hash'
 				data = q.get()
+				print data
 				queueLock.release()
 				for pw in pws:
 					pw = pw.strip()
 					result = base64.b64encode(hashlib.sha256('CMSC414'+ pw +'Fall16').digest())
 					#print result
-					if result in hashes:
+					if data == result:
+						writelock.acquire()
 						outfile.write(pw)
+						writelock.release()
 						print pw
 						break
 					else:
@@ -42,9 +47,10 @@ pwfilename = sys.argv[1]
 hashfilename = sys.argv[2]
 cpus = multiprocessing.cpu_count()
 queueLock = threading.Lock()
+writelock = threading.Lock()
 workQueue = Queue.Queue(100)
 threads = []
-pws = tuple(open(pwfilename, 'rb'))
+pws = tuple(open(pwfilename, 'r'))
 hashes = tuple(open(hashfilename, 'r'))
 outfile = open('cracked.txt', 'w')
 print cpus
