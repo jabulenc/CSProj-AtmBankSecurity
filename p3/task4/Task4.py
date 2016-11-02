@@ -29,13 +29,15 @@ def crack(q):
             # check for matching -
             # if false, continue. Else, write pass and grab next item.
             # Need to handle for no-match
-            result = base64.b64encode(hashlib.sha256('CMSC414'+ pw +'Fall16').digest())
-            if result in hashes:
-                #done
-                print pw
-                continue
-            else:
-                continue
+			for pw in pws:
+					pw = pw.strip()
+					result = base64.b64encode(hashlib.sha256('CMSC414'+ pw +'Fall16').digest())
+            	if result in hashes:
+                	outfile.write(pw)
+                	print pw
+                	continue
+            	else:
+                	continue
         else:
             queueLock.release()
         #time.sleep(1) May not need this line at all
@@ -48,6 +50,7 @@ workQueue = Queue.Queue(100)
 threads = []
 pws = tuple(open(pwfilename, 'rb'))
 hashes = tuple(open(hashfilename, 'r'))
+outfile = open('cracked.txt', 'w')
 
 # Fill the queue
 queueLock.acquire()
@@ -67,6 +70,8 @@ while not workQueue.empty():
 
 # Notify threads it's time to exit
 exitFlag = 1
+
+outfile.close()
 
 # Wait for all threads to complete
 for t in threads:
