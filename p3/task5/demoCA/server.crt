@@ -1,0 +1,61 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C=US, ST=Maryland, L=College Park, O=UMD, OU=CS, CN=Jon/emailAddress=jon@jon.com
+        Validity
+            Not Before: Nov  2 21:42:52 2016 GMT
+            Not After : Nov  2 21:42:52 2017 GMT
+        Subject: C=US, ST=Maryland, O=UMD, OU=CS, CN=PKILabServer.com/emailAddress=jon@jon.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:b5:a3:cb:00:b7:bc:0f:d0:29:a9:38:a4:5f:1c:
+                    db:c7:5a:33:ef:f3:95:9d:5b:47:8e:2a:a2:33:20:
+                    26:72:c0:9e:91:2d:ee:b6:2f:2a:f5:49:e9:20:06:
+                    77:5d:df:7f:5a:ee:fd:04:27:f0:10:ce:f5:fe:a6:
+                    1e:b7:67:9e:94:50:9a:3c:bd:25:90:7a:9d:0f:ab:
+                    e7:0e:b1:4a:4e:f7:65:93:4b:48:fb:bc:9c:22:33:
+                    b5:86:e6:b0:93:27:61:67:15:47:08:7c:0e:09:70:
+                    13:22:87:6c:27:5b:8e:2e:0d:93:39:d1:4b:11:c6:
+                    36:4f:26:17:41:1d:47:2f:2d
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                B7:6C:2F:52:57:0D:6D:CB:AD:6E:20:96:12:E9:39:18:61:8A:52:2F
+            X509v3 Authority Key Identifier: 
+                keyid:8B:D7:B1:D1:58:F2:A6:BE:57:13:1D:AC:5F:32:01:8F:A3:8E:A4:6E
+
+    Signature Algorithm: sha1WithRSAEncryption
+         59:7d:a5:9f:a9:08:cf:d7:23:d1:b8:d3:fe:e3:d8:ca:48:ae:
+         9a:5e:7e:12:73:d1:29:15:27:bf:f8:37:c7:df:42:0e:db:4e:
+         6c:ed:1b:6d:a0:49:66:8b:02:dc:b6:eb:2e:8d:82:f1:06:7b:
+         41:6c:41:4e:9d:90:65:f7:61:44:18:fb:df:e0:8a:43:9a:71:
+         a1:e9:2d:b1:a5:7f:7b:ea:12:9d:a7:ba:27:85:14:f4:af:03:
+         43:a3:c5:ed:fa:53:ba:a6:98:10:87:07:69:68:15:e0:50:31:
+         50:07:42:71:ec:45:f1:3b:08:4c:31:c0:eb:6b:b6:00:fc:f5:
+         38:1d
+-----BEGIN CERTIFICATE-----
+MIIC4DCCAkmgAwIBAgICEAAwDQYJKoZIhvcNAQEFBQAwfDELMAkGA1UEBhMCVVMx
+ETAPBgNVBAgTCE1hcnlsYW5kMRUwEwYDVQQHEwxDb2xsZWdlIFBhcmsxDDAKBgNV
+BAoTA1VNRDELMAkGA1UECxMCQ1MxDDAKBgNVBAMTA0pvbjEaMBgGCSqGSIb3DQEJ
+ARYLam9uQGpvbi5jb20wHhcNMTYxMTAyMjE0MjUyWhcNMTcxMTAyMjE0MjUyWjBy
+MQswCQYDVQQGEwJVUzERMA8GA1UECBMITWFyeWxhbmQxDDAKBgNVBAoTA1VNRDEL
+MAkGA1UECxMCQ1MxGTAXBgNVBAMTEFBLSUxhYlNlcnZlci5jb20xGjAYBgkqhkiG
+9w0BCQEWC2pvbkBqb24uY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC1
+o8sAt7wP0CmpOKRfHNvHWjPv85WdW0eOKqIzICZywJ6RLe62Lyr1SekgBndd339a
+7v0EJ/AQzvX+ph63Z56UUJo8vSWQep0Pq+cOsUpO92WTS0j7vJwiM7WG5rCTJ2Fn
+FUcIfA4JcBMih2wnW44uDZM50UsRxjZPJhdBHUcvLQIDAQABo3sweTAJBgNVHRME
+AjAAMCwGCWCGSAGG+EIBDQQfFh1PcGVuU1NMIEdlbmVyYXRlZCBDZXJ0aWZpY2F0
+ZTAdBgNVHQ4EFgQUt2wvUlcNbcutbiCWEuk5GGGKUi8wHwYDVR0jBBgwFoAUi9ex
+0Vjypr5XEx2sXzIBj6OOpG4wDQYJKoZIhvcNAQEFBQADgYEAWX2ln6kIz9cj0bjT
+/uPYykiuml5+EnPRKRUnv/g3x99CDttObO0bbaBJZosC3LbrLo2C8QZ7QWxBTp2Q
+ZfdhRBj73+CKQ5pxoektsaV/e+oSnae6J4UU9K8DQ6PF7fpTuqaYEIcHaWgV4FAx
+UAdCcexF8TsITDHA62u2APz1OB0=
+-----END CERTIFICATE-----
