@@ -18,28 +18,24 @@ class myThread (threading.Thread):
         crack(self.q)
 
 def crack(q):
-    while not exitFlag:
-        queueLock.acquire()
-        if not workQueue.empty():
-            data = q.get()
-            queueLock.release()
-            # Process here
-            # idea - for each password, create saltpasspepp hash
-            # check against hash received
-            # check for matching -
-            # if false, continue. Else, write pass and grab next item.
-            # Need to handle for no-match
-			for pw in pws:
+	while not exitFlag:
+			queueLock.acquire()
+			if not workQueue.empty():
+				print 'getting new hash'
+				data = q.get()
+				queueLock.release()
+				for pw in pws:
 					pw = pw.strip()
 					result = base64.b64encode(hashlib.sha256('CMSC414'+ pw +'Fall16').digest())
-            	if result in hashes:
-                	outfile.write(pw)
-                	print pw
-                	continue
-            	else:
-                	continue
-        else:
-            queueLock.release()
+					#print result
+					if result in hashes:
+						outfile.write(pw)
+						print pw
+						break
+					else:
+						continue
+			else:
+				queueLock.release()
         #time.sleep(1) May not need this line at all
 
 pwfilename = sys.argv[1]
@@ -51,7 +47,7 @@ threads = []
 pws = tuple(open(pwfilename, 'rb'))
 hashes = tuple(open(hashfilename, 'r'))
 outfile = open('cracked.txt', 'w')
-
+print cpus
 # Fill the queue
 queueLock.acquire()
 for hash in hashes:
