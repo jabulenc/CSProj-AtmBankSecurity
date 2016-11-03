@@ -1,0 +1,8 @@
+1. Bitcoin is a digital currency that operates independently of a central bank or national fiat curency
+2. To generate bitcoins, the Hashcash function as a proof-of-work function, to prove who mined what coins from the block chain.
+        Hashcash uses symmetric key cryptography and SHA256
+    Hashing is used to both encrypt the input data of the block chain, but to also compress the input data.
+    Asymmetric encryption is part of the several safeties built into bitcoin transactions. 
+        Transactions are made to addresses, which is essentially saying that the person who owns the private key that corresponds to the transaction address may spend the coin.
+        
+    
