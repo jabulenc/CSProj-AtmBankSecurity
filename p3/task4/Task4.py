@@ -33,12 +33,16 @@ def crack(q):
 					#print result
 					if data == result:
 						writelock.acquire()
-						outfile.write(pw)
+						outfile.write(pw+"\n")
 						writelock.release()
 						print pw
 						break
 					else:
 						continue
+				if data != result:
+					writelock.acquire()
+					outfile.write(data+"\n")
+					writelock.release()
 			else:
 				queueLock.release()
         #time.sleep(1) May not need this line at all
