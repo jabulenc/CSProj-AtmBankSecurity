@@ -5,4 +5,5 @@
     Asymmetric encryption is part of the several safeties built into bitcoin transactions. 
         Transactions are made to addresses, which is essentially saying that the person who owns the private key that corresponds to the transaction address may spend the coin.
         
-    
+3. A potential attack against bitcoin could be a man-in-the-middle during transactions. (http://www.bitcoin-babe.com/single-post/2015/09/01/SCAM-WARNING-MAN-IN-THE-MIDDLE-ATTACK)
+	An easy attack would be fradulently converting fiat currency to bitcoin. Keep the money (either in bit or fiat) and disappear into anonymity...
