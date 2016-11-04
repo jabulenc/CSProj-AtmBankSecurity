@@ -1,0 +1,2 @@
+1. Looks like it deemed my certificate bad and told me to get a new one.
+2. It just hung... never finished connecting.
